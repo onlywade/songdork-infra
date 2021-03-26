@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: twongs
+spec:
+  selector:
+    matchLabels:
+      app: twongs
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: twongs
+    spec:
+      containers:
+      - name: twongs
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        ports:
+          - containerPort: 5000
+            name: twongs
+        resources:
+          requests:
+            memory: 64Mi
+            cpu: 100m
+        env:
+          - name: T_FROM_NO
+            value: {{ .Values.twilio.phoneNumber }}
+          - name: SECRET_TWILIO_ACCOUNT_SID
+            valueFrom:
+              secretKeyRef:
+                name: twilio-credentials
+                key: account-sid
+          - name: SECRET_TWILIO_API_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: twilio-credentials
+                key: api-token
+          - name: SECRET_GOOGLE_CX_ID
+            valueFrom:
+              secretKeyRef:
+                name: google-credentials
+                key: cx-id
+          - name: SECRET_GOOGLE_API_KEY
+            valueFrom:
+              secretKeyRef:
+                name: google-credentials
+                key: api-key
