@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: twongs
+  name: songdork
 spec:
   selector:
     matchLabels:
-      app: twongs
+      app: songdork
   replicas: {{ .Values.replicaCount }}
   template:
     metadata:
       labels:
-        app: twongs
+        app: songdork
     spec:
       containers:
-      - name: twongs
+      - name: songdork
         image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         ports:
           - containerPort: 5000
-            name: twongs
+            name: songdork
         env:
           - name: T_FROM_NO
             value: {{ .Values.twilio.phoneNumber }}

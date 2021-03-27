@@ -1,11 +1,11 @@
-# Default values for twongs.
+# Default values for songdork.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: docker.io/onlywade/twongs
+  repository: docker.io/onlywade/songdork
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "0.0.4"
