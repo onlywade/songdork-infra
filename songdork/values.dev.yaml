@@ -7,6 +7,6 @@ image:
   repository: docker.io/onlywade/songdork
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "add_response-b756c6f"
+  tag: "add_response-59879a5"
 twilio:
   phoneNumber: "+1 402 267 9248"
