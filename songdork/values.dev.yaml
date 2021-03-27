@@ -3,12 +3,10 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
-
 image:
   repository: docker.io/onlywade/songdork
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "master-775b62f"
-
+  tag: "add_response-007bce0"
 twilio:
   phoneNumber: "+1 402 267 9248"
