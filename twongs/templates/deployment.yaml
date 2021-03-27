@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: twong
+      app: twongs
   replicas: {{ .Values.replicaCount }}
   template:
     metadata:
