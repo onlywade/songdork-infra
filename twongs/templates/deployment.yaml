@@ -5,8 +5,8 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: twongs
-  replicas: 2
+      app: twong
+  replicas: {{ .Values.replicaCount }}
   template:
     metadata:
       labels:
@@ -18,10 +18,6 @@ spec:
         ports:
           - containerPort: 5000
             name: twongs
-        resources:
-          requests:
-            memory: 64Mi
-            cpu: 100m
         env:
           - name: T_FROM_NO
             value: {{ .Values.twilio.phoneNumber }}
