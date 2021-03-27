@@ -1,12 +1,14 @@
-# Default values for songdork.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
-
-replicaCount: 1
 image:
   repository: docker.io/onlywade/songdork
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
   tag: "add_response-f9e3907"
+ 
+replicaCount: 2
+
+resources:
+  requests:
+    cpu: 250m
+    memory: 512Mi
+
 twilio:
   phoneNumber: "+1 402 819 7071"

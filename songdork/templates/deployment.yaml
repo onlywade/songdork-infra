@@ -41,3 +41,6 @@ spec:
               secretKeyRef:
                 name: google-credentials
                 key: api-key
+        resources:
+          {{- toYaml .Values.resources | nindent 12 }}
+
