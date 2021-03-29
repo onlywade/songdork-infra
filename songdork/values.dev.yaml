@@ -1,7 +1,7 @@
 image:
   repository: docker.io/onlywade/songdork
   pullPolicy: IfNotPresent
-  tag: "add_response-66852c9"
+  tag: "title_fix"
 replicaCount: 1
 resources:
   requests:
