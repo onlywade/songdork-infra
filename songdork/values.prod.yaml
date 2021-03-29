@@ -1,14 +1,11 @@
 image:
   repository: docker.io/onlywade/songdork
   pullPolicy: IfNotPresent
-  tag: "add_response-f9e3907"
- 
+  tag: "title_fix"
 replicaCount: 2
-
 resources:
   requests:
     cpu: 250m
     memory: 512Mi
-
 twilio:
   phoneNumber: "+1 402 819 7071"
