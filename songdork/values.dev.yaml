@@ -1,7 +1,7 @@
 image:
   repository: docker.io/onlywade/songdork
   pullPolicy: IfNotPresent
-  tag: "disable_debug-cb9e62f"
+  tag: "master-318e698"
 replicaCount: 1
 resources:
   requests:
