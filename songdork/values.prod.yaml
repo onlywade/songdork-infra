@@ -2,7 +2,7 @@ image:
   repository: docker.io/onlywade/songdork
   pullPolicy: IfNotPresent
   tag: "master-318e698"
-replicaCount: 2
+replicaCount: 1
 resources:
   requests:
     cpu: 250m
