@@ -1,7 +1,7 @@
 image:
   repository: docker.io/onlywade/songdork
   pullPolicy: IfNotPresent
-  tag: "master-318e698"
+  tag: "dependabotpipurllib3-1.26.5-d7b599a"
 replicaCount: 1
 resources:
   requests:
