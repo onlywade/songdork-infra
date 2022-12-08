@@ -1,7 +1,7 @@
 image:
   repository: docker.io/onlywade/songdork
   pullPolicy: IfNotPresent
-  tag: "dependabotpippyjwt-2.4.0-dc1e4f3"
+  tag: "dependabotpipcertifi-2022.12.7-f04f596"
 replicaCount: 1
 resources:
   requests:
